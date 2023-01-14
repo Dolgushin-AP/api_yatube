@@ -19,6 +19,7 @@ class GroupSerializer(serializers.ModelSerializer):
         model = Group
         fields = ('id', 'title', 'slug', 'description')
 
+
 class CommentSerializer(serializers.ModelSerializer):
     author = serializers.SlugRelatedField(
         slug_field='username', read_only=True
